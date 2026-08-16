@@ -1,0 +1,3139 @@
+/* ==========================================================
+   RUMAH DIJUAL - VILLA SENGKALING
+   style.css
+   Part 1A
+   Reset + Variables + Body + Navbar
+========================================================== */
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+
+    scroll-padding-top:80px;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    color:#333;
+
+    background:#f7f8fa;
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================
+   VARIABLES
+========================== */
+
+:root{
+
+    --primary:#0b6db8;
+
+    --secondary:#1f9d55;
+
+    --dark:#222;
+
+    --light:#ffffff;
+
+    --gray:#777;
+
+    --bg:#f5f7fa;
+
+    --border:#e6e6e6;
+
+    --shadow:0 10px 25px rgba(0,0,0,.10);
+
+    --radius:12px;
+
+    --transition:.35s ease;
+
+}
+
+/* ==========================
+   TYPOGRAPHY
+========================== */
+
+h1{
+
+    font-size:52px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+}
+
+h2{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:var(--dark);
+
+    margin-bottom:20px;
+
+}
+
+h3{
+
+    font-size:24px;
+
+    font-weight:600;
+
+}
+
+p{
+
+    font-size:17px;
+
+    color:#555;
+
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+a{
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+    color:inherit;
+
+}
+
+img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* ==========================
+   SECTION
+========================== */
+
+section{
+
+    padding:90px 0;
+
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+#navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:transparent;
+
+    backdrop-filter:none;
+
+    z-index:999;
+
+    transition:all .4s ease;
+
+}
+
+#navbar.scrolled{
+
+    background:rgba(255,255,255,.98);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.10);
+
+}
+
+#navbar .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:80px;
+
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+#navbar.scrolled .logo{
+
+    color:var(--primary);
+
+}
+
+.logo i{
+
+    color:var(--secondary);
+
+    font-size:26px;
+
+}
+
+/* ==========================
+   MENU
+========================== */
+
+#navbar ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+#navbar ul li a{
+
+    font-weight:500;
+
+    color:#ffffff;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+#navbar.scrolled ul li a{
+
+    color:#333;
+
+}
+
+#navbar ul li a:hover{
+
+    color:#ffd54f;
+
+}
+
+#navbar.scrolled ul li a:hover{
+
+    color:var(--primary);
+
+}
+
+#navbar ul li a.active{
+
+    color:#ffd54f;
+
+    font-weight:700;
+
+}
+
+#navbar.scrolled ul li a.active{
+
+    color:var(--primary);
+
+}
+
+/* underline animation */
+
+#navbar ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+#navbar ul li a:hover::after{
+
+    width:100%;
+
+}
+
+/* ==========================
+   NAVBAR SCROLL
+========================== */
+
+
+
+/* ==========================
+   BUTTON DEFAULT
+========================== */
+
+.btn{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:15px 32px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.btn:hover{
+
+    background:#095894;
+
+    transform:translateY(-3px);
+
+}
+
+.btn2{
+
+    display:inline-block;
+
+    border:2px solid #fff;
+
+    color:#fff;
+
+    padding:15px 32px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn2:hover{
+
+    background:#fff;
+
+    color:var(--primary);
+
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.subtitle{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#666;
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+/* ==========================
+   UTILITIES
+========================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-20{
+
+    margin-top:20px;
+
+}
+
+.mt-40{
+
+    margin-top:40px;
+
+}
+
+.mb-40{
+
+    margin-bottom:40px;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+#navbar .container{
+
+flex-direction:column;
+
+height:auto;
+
+padding:15px 0;
+
+}
+
+#navbar ul{
+
+margin-top:15px;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.logo{
+
+font-size:22px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+#navbar ul{
+
+gap:12px;
+
+}
+
+#navbar ul li a{
+
+font-size:14px;
+
+}
+
+.container{
+
+width:94%;
+
+}
+
+section{
+
+padding:70px 0;
+
+}
+
+}
+
+/* ==========================================================
+   PART 1B
+   HERO SECTION
+========================================================== */
+
+/* HERO */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    background:url("hero.jpeg") center center/cover no-repeat;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+}
+
+/* Overlay */
+
+.overlay{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(
+        rgba(0,0,0,.60),
+        rgba(0,0,0,.50)
+    );
+
+}
+
+/* Hero Content */
+
+.hero-content{
+
+    text-align:center;
+
+    color:#fff;
+
+    width:90%;
+
+    max-width:900px;
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+/* Small Title */
+
+.hero-content h3{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    margin-bottom:20px;
+
+    border-radius:50px;
+
+    background:#0b6db8;
+
+    color:#fff;
+
+    font-size:16px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+/* Main Title */
+
+.hero-content h1{
+
+    font-size:64px;
+
+    color:#fff;
+
+    margin-bottom:10px;
+
+    text-shadow:0 5px 15px rgba(0,0,0,.4);
+
+}
+
+/* Subtitle */
+
+.hero-content h2{
+
+    color:#fff;
+
+    font-size:34px;
+
+    margin-bottom:25px;
+
+}
+
+/* Address */
+
+.hero-content p{
+
+    color:#f1f1f1;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    margin-bottom:45px;
+
+}
+
+/* Buttons */
+
+.hero-button{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* Hero Buttons */
+
+.hero-button .btn{
+
+    min-width:210px;
+
+    text-align:center;
+
+}
+
+.hero-button .btn2{
+
+    min-width:210px;
+
+    text-align:center;
+
+}
+
+/* Hover */
+
+.hero-button .btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.hero-button .btn2:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* Scroll Indicator */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:50%;
+
+    width:22px;
+
+    height:36px;
+
+    border:2px solid #fff;
+
+    border-radius:20px;
+
+    transform:translateX(-50%);
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:52px;
+
+    left:50%;
+
+    width:4px;
+
+    height:10px;
+
+    background:#fff;
+
+    border-radius:50px;
+
+    transform:translateX(-50%);
+
+    animation:scrollMouse 2s infinite;
+
+}
+
+/* Background Zoom */
+
+.hero{
+
+    animation:heroZoom 25s linear infinite alternate;
+
+}
+
+/* ==========================
+   ANIMATION
+========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes heroZoom{
+
+    from{
+
+        background-size:100%;
+
+    }
+
+    to{
+
+        background-size:110%;
+
+    }
+
+}
+
+@keyframes scrollMouse{
+
+    0%{
+
+        opacity:0;
+
+        transform:translate(-50%,0);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translate(-50%,12px);
+
+    }
+
+}
+
+/* ==========================
+   RESPONSIVE TABLET
+========================== */
+
+@media(max-width:992px){
+
+.hero-content h1{
+
+font-size:52px;
+
+}
+
+.hero-content h2{
+
+font-size:28px;
+
+}
+
+.hero-content p{
+
+font-size:18px;
+
+}
+
+}
+
+/* ==========================
+   RESPONSIVE MOBILE
+========================== */
+
+@media(max-width:768px){
+
+.hero{
+
+min-height:92vh;
+
+}
+
+.overlay{
+
+min-height:92vh;
+
+}
+
+.hero-content h3{
+
+font-size:14px;
+
+letter-spacing:1px;
+
+}
+
+.hero-content h1{
+
+font-size:40px;
+
+}
+
+.hero-content h2{
+
+font-size:24px;
+
+}
+
+.hero-content p{
+
+font-size:16px;
+
+line-height:1.7;
+
+}
+
+.hero-button{
+
+flex-direction:column;
+
+}
+
+.hero-button .btn,
+
+.hero-button .btn2{
+
+width:100%;
+
+max-width:300px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+    .lightbox-nav{
+
+        width:42px;
+
+        height:58px;
+
+        font-size:26px;
+
+    }
+
+    .lightbox-nav.prev{
+
+        left:8px;
+
+    }
+
+    .lightbox-nav.next{
+
+        right:8px;
+
+    }
+
+    #imageCounter{
+
+        bottom:15px;
+
+        font-size:13px;
+
+        padding:6px 12px;
+
+    }
+
+}
+
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media(max-width:480px){
+
+.hero-content h1{
+
+font-size:34px;
+
+}
+
+.hero-content h2{
+
+font-size:20px;
+
+}
+
+.hero-content p{
+
+font-size:15px;
+
+}
+
+}
+
+/* ==========================================================
+   PART 1C
+   ABOUT & SPESIFIKASI
+========================================================== */
+
+/* ==========================
+   ABOUT
+========================== */
+
+.about{
+
+    background:#ffffff;
+
+}
+
+.about .container{
+
+    max-width:900px;
+
+    text-align:center;
+
+}
+
+.about h2{
+
+    margin-bottom:25px;
+
+    color:var(--primary);
+
+}
+
+.about p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#555;
+
+}
+
+/* ==========================
+   SPESIFIKASI
+========================== */
+
+.spec{
+
+    background:var(--bg);
+
+}
+
+.spec h2{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+/* ==========================
+   CARD GRID
+========================== */
+
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.card{
+
+    background:#fff;
+
+    padding:35px 20px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    border:1px solid #ececec;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+
+}
+
+/* ==========================
+   ICON
+========================== */
+
+.card i{
+
+    font-size:42px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+    transition:.35s;
+
+}
+
+.card:hover i{
+
+    transform:scale(1.15);
+
+    color:var(--secondary);
+
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.card h3{
+
+    margin-bottom:12px;
+
+    font-size:20px;
+
+    color:#222;
+
+}
+
+/* ==========================
+   VALUE
+========================== */
+
+.card p{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:var(--secondary);
+
+}
+
+/* ==========================
+   CARD ANIMATION
+========================== */
+
+.card{
+
+    animation:fadeCard .8s ease;
+
+}
+
+@keyframes fadeCard{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media(max-width:992px){
+
+.card-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:640px){
+
+.card-grid{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+.card{
+
+padding:28px 20px;
+
+}
+
+.card h3{
+
+font-size:18px;
+
+}
+
+.card p{
+
+font-size:17px;
+
+}
+
+.card i{
+
+font-size:38px;
+
+}
+
+.about p{
+
+font-size:16px;
+
+}
+
+}
+
+/* ==========================================================
+   PART 2A-1
+   GALLERY
+========================================================== */
+
+.gallery{
+
+    background:#ffffff;
+
+}
+
+.gallery .container{
+
+    max-width:1350px;
+
+}
+
+.gallery h2{
+
+    text-align:center;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.gallery .subtitle{
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:17px;
+
+    margin-bottom:45px;
+
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+/* ==========================
+   ITEM
+========================== */
+
+.gallery-item{
+
+    position:relative;
+
+    display:block;
+
+    overflow:hidden;
+
+    border-radius:16px;
+
+    background:#fff;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+
+    transition:.35s ease;
+
+}
+
+/* ==========================
+   IMAGE
+========================== */
+
+.gallery-item img{
+
+    display:block;
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:transform .45s ease;
+
+}
+
+/* ==========================
+   HOVER SHADOW
+========================== */
+
+.gallery-item:hover{
+
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+    transform:translateY(-6px);
+
+}
+
+/* ==========================
+   IMAGE BORDER
+========================== */
+
+.gallery-item img{
+
+    border-radius:16px;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:1200px){
+
+.gallery-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:900px){
+
+.gallery-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px;
+
+}
+
+.gallery-item img{
+
+height:230px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.gallery-grid{
+
+grid-template-columns:1fr;
+
+gap:18px;
+
+}
+
+.gallery-item img{
+
+height:auto;
+
+}
+
+}
+
+/* ==========================================================
+   PART 2A-2
+   GALLERY HOVER EFFECT
+========================================================== */
+
+/* ==========================
+   IMAGE ANIMATION
+========================== */
+
+.gallery-item img{
+
+    transition:
+        transform .6s ease,
+        filter .35s ease;
+
+}
+
+/* ==========================
+   ZOOM
+========================== */
+
+.gallery-item:hover img{
+
+    transform:scale(1.10);
+
+    filter:brightness(.80);
+
+}
+
+/* ==========================
+   OVERLAY
+========================== */
+
+.gallery-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    opacity:0;
+
+    transition:.35s ease;
+
+    z-index:2;
+
+}
+
+.gallery-item:hover::before{
+
+    opacity:1;
+
+}
+
+/* ==========================
+   MAGNIFIER ICON
+========================== */
+
+.gallery-item::after{
+
+    content:"\f00e";
+
+    font-family:"Font Awesome 6 Free";
+
+    font-weight:900;
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%) scale(.6);
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.95);
+
+    color:var(--primary);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:26px;
+
+    opacity:0;
+
+    transition:.35s ease;
+
+    z-index:3;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.20);
+
+}
+
+.gallery-item:hover::after{
+
+    opacity:1;
+
+    transform:translate(-50%,-50%) scale(1);
+
+}
+
+/* ==========================
+   HOVER CARD
+========================== */
+
+.gallery-item{
+
+    cursor:pointer;
+
+}
+
+.gallery-item:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ==========================
+   CLICK EFFECT
+========================== */
+
+.gallery-item:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================
+   IMAGE LOADING
+========================== */
+
+.gallery-item{
+
+    background:#f5f5f5;
+
+}
+
+.gallery-item img{
+
+    opacity:0;
+
+    animation:galleryFade .8s forwards;
+
+}
+
+@keyframes galleryFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ==========================
+   KEYBOARD ACCESSIBILITY
+========================== */
+
+.gallery-item:focus{
+
+    outline:none;
+
+}
+
+.gallery-item:focus-visible{
+
+    box-shadow:
+
+    0 0 0 4px rgba(11,109,184,.25),
+
+    0 10px 30px rgba(0,0,0,.15);
+
+}
+
+/* ==========================
+   BORDER ANIMATION
+========================== */
+
+.gallery-item{
+
+    border:2px solid transparent;
+
+}
+
+.gallery-item:hover{
+
+    border-color:rgba(11,109,184,.25);
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+.gallery-item::after{
+
+width:58px;
+
+height:58px;
+
+font-size:20px;
+
+}
+
+.gallery-item:hover img{
+
+transform:scale(1.05);
+
+}
+
+}
+
+/* ==========================================================
+   PART 2A-3
+   LIGHTBOX
+========================================================== */
+
+/* Background */
+
+#lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.92);
+
+    backdrop-filter:blur(6px);
+
+    z-index:99999;
+
+    padding:40px;
+
+    animation:fadeLightbox .35s ease;
+
+}
+
+/* Active */
+
+#lightbox.active{
+
+    display:flex;
+
+}
+
+/* Image */
+
+#lightboxImage{
+
+    max-width:92%;
+
+    max-height:90vh;
+
+    border-radius:12px;
+
+    background:#fff;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+    animation:zoomImage .35s ease;
+
+}
+
+/* Close Button */
+
+#closeLightbox{
+
+    position:absolute;
+
+    top:20px;
+
+    right:30px;
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,255,255,.12);
+
+    color:#fff;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    user-select:none;
+
+}
+
+#closeLightbox:hover{
+
+    background:#ffffff;
+
+    color:#000;
+
+    transform:rotate(90deg);
+
+}
+
+/* Click Animation */
+
+#closeLightbox:active{
+
+    transform:scale(.9);
+
+}
+
+/* Image Hover */
+
+#lightboxImage:hover{
+
+    cursor:zoom-out;
+
+}
+
+/* Fade */
+
+@keyframes fadeLightbox{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* Zoom */
+
+@keyframes zoomImage{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.82);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+#lightbox{
+
+padding:20px;
+
+}
+
+#lightboxImage{
+
+max-width:100%;
+
+max-height:82vh;
+
+}
+
+#closeLightbox{
+
+top:15px;
+
+right:15px;
+
+width:45px;
+
+height:45px;
+
+font-size:30px;
+
+}
+
+}
+
+/* VERY SMALL PHONE */
+
+@media(max-width:480px){
+
+#lightbox{
+
+padding:10px;
+
+}
+
+#lightboxImage{
+
+border-radius:8px;
+
+max-height:80vh;
+
+}
+
+}
+
+/* Prevent Selection */
+
+#lightbox,
+#lightbox *{
+
+    user-select:none;
+
+}
+
+/* Smooth */
+
+#lightbox{
+
+    transition:opacity .3s ease;
+
+}
+
+/* =====================================
+   LIGHTBOX NAVIGATION
+===================================== */
+
+.lightbox-nav{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:50px;
+
+    height:70px;
+
+    border:none;
+
+    background:rgba(0,0,0,.45);
+
+    color:#fff;
+
+    font-size:32px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:1002;
+
+    transition:.3s;
+
+}
+
+.lightbox-nav:hover{
+
+    background:rgba(0,0,0,.75);
+
+}
+
+.lightbox-nav.prev{
+
+    left:20px;
+
+}
+
+.lightbox-nav.next{
+
+    right:20px;
+
+}
+
+
+/* =====================================
+   IMAGE COUNTER
+===================================== */
+
+#imageCounter{
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:#fff;
+
+    background:rgba(0,0,0,.55);
+
+    padding:7px 15px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    z-index:1002;
+
+}
+
+/* ==========================================================
+   PART 2B
+   FEATURE / KEUNGGULAN
+========================================================== */
+
+.feature{
+
+    background:linear-gradient(180deg,#f8fbff,#eef5fb);
+
+}
+
+.feature .container{
+
+    max-width:1280px;
+
+}
+
+.feature h2{
+
+    text-align:center;
+
+    color:var(--primary);
+
+    margin-bottom:55px;
+
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.feature-card{
+
+    background:#ffffff;
+
+    padding:40px 28px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    border:1px solid #ebebeb;
+
+    box-shadow:0 12px 28px rgba(0,0,0,.08);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ==========================
+   TOP BORDER
+========================== */
+
+.feature-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+/* ==========================
+   ICON
+========================== */
+
+.feature-card i{
+
+    width:85px;
+
+    height:85px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #3aa6ff
+    );
+
+    color:#fff;
+
+    font-size:34px;
+
+    transition:.35s;
+
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.feature-card h3{
+
+    margin-bottom:15px;
+
+    color:#222;
+
+    font-size:22px;
+
+}
+
+/* ==========================
+   TEXT
+========================== */
+
+.feature-card p{
+
+    color:#666;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================
+   HOVER
+========================== */
+
+.feature-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+.feature-card:hover i{
+
+    transform:rotate(360deg) scale(1.12);
+
+    background:linear-gradient(
+        135deg,
+        var(--secondary),
+        #39d98a
+    );
+
+}
+
+/* ==========================
+   ICON SHADOW
+========================== */
+
+.feature-card:hover i{
+
+    box-shadow:
+
+    0 15px 30px rgba(11,109,184,.30);
+
+}
+
+/* ==========================
+   CARD GLOW
+========================== */
+
+.feature-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:18px;
+
+    border:2px solid transparent;
+
+    transition:.35s;
+
+}
+
+.feature-card:hover::after{
+
+    border-color:rgba(11,109,184,.15);
+
+}
+
+/* ==========================
+   ANIMATION
+========================== */
+
+.feature-card{
+
+    animation:featureFade .8s ease;
+
+}
+
+@keyframes featureFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media(max-width:992px){
+
+.feature-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+}
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:640px){
+
+.feature-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.feature-card{
+
+padding:35px 22px;
+
+}
+
+.feature-card h3{
+
+font-size:20px;
+
+}
+
+.feature-card p{
+
+font-size:15px;
+
+}
+
+.feature-card i{
+
+width:72px;
+
+height:72px;
+
+font-size:28px;
+
+}
+
+}
+
+/* ==========================================================
+   PART 2C-1
+   LOCATION
+========================================================== */
+
+.location{
+
+    background:#ffffff;
+
+}
+
+.location .container{
+
+    max-width:1100px;
+
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.location h2{
+
+    text-align:center;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================
+   ADDRESS
+========================== */
+
+.location p{
+
+    text-align:center;
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#555;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================
+   GOOGLE MAP
+========================== */
+
+.location iframe{
+
+    width:100%;
+
+    height:450px;
+
+    border:none;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
+
+    transition:.35s;
+
+}
+
+/* Hover */
+
+.location iframe:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 25px 50px rgba(0,0,0,.20);
+
+}
+
+/* ==========================
+   BUTTON AREA
+========================== */
+
+.map-button{
+
+    text-align:center;
+
+    margin-top:35px;
+
+}
+
+/* Button */
+
+.map-button .btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+/* Icon */
+
+.map-button i{
+
+    font-size:20px;
+
+}
+
+/* Hover */
+
+.map-button .btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================
+   MAP CARD EFFECT
+========================== */
+
+.location iframe{
+
+    background:#f5f5f5;
+
+}
+
+/* ==========================
+   RESPONSIVE TABLET
+========================== */
+
+@media(max-width:992px){
+
+.location iframe{
+
+height:400px;
+
+}
+
+}
+
+/* ==========================
+   RESPONSIVE MOBILE
+========================== */
+
+@media(max-width:768px){
+
+.location{
+
+padding:70px 0;
+
+}
+
+.location p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+.location iframe{
+
+height:320px;
+
+border-radius:14px;
+
+}
+
+.map-button .btn{
+
+width:100%;
+
+max-width:320px;
+
+}
+
+}
+
+/* ==========================
+   SMALL PHONE
+========================== */
+
+@media(max-width:480px){
+
+.location iframe{
+
+height:260px;
+
+}
+
+.location h2{
+
+font-size:30px;
+
+}
+
+}
+
+/* ==========================================================
+   PART 2C-2
+   CONTACT
+========================================================== */
+
+.contact{
+
+    background:linear-gradient(180deg,#eef7ff,#ffffff);
+
+}
+
+.contact .container{
+
+    max-width:1200px;
+
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.contact h2{
+
+    text-align:center;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.contact > .container > p{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:17px;
+
+    margin-bottom:45px;
+
+}
+
+/* ==========================
+   CONTACT GRID
+========================== */
+
+.contact{
+
+    padding:90px 0;
+
+}
+
+.contact .container{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.contact-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+
+    transition:.35s;
+
+    border:1px solid #e8e8e8;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 22px 45px rgba(0,0,0,.16);
+
+}
+
+/* ==========================
+   WHATSAPP ICON
+========================== */
+
+.contact-card h3{
+
+    margin-bottom:18px;
+
+    font-size:24px;
+
+    color:#222;
+
+}
+
+.contact-card h3 i{
+
+    color:#25D366;
+
+    font-size:34px;
+
+    margin-right:10px;
+
+}
+
+/* ==========================
+   PHONE NUMBER
+========================== */
+
+.contact-card p{
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:#444;
+
+    margin-bottom:25px;
+
+    letter-spacing:.5px;
+
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.contact-card .btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:100%;
+
+    max-width:260px;
+
+    padding:16px 28px;
+
+    border-radius:50px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    background:#25D366;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.contact-card .btn:hover{
+
+    background:#1ebe5d;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================
+   BUTTON ICON
+========================== */
+
+.contact-card .btn::before{
+
+    content:"\f232";
+
+    font-family:"Font Awesome 6 Brands";
+
+    margin-right:10px;
+
+    font-size:20px;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.contact-card{
+
+padding:30px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.contact{
+
+padding:70px 0;
+
+}
+
+.contact-card h3{
+
+font-size:21px;
+
+}
+
+.contact-card p{
+
+font-size:18px;
+
+}
+
+.contact-card .btn{
+
+max-width:100%;
+
+}
+
+}
+
+/* ==========================================================
+   PART 2C-3
+   FOOTER
+========================================================== */
+
+footer{
+
+    background:linear-gradient(135deg,#0b3b68,#0b6db8);
+
+    color:#ffffff;
+
+    padding:55px 20px 30px;
+
+    text-align:center;
+
+}
+
+footer .container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* ==========================
+   JUDUL
+========================== */
+
+footer h3{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+    letter-spacing:.5px;
+
+}
+
+/* ==========================
+   ALAMAT
+========================== */
+
+footer .footer-address{
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    opacity:.92;
+
+    margin-bottom:28px;
+
+}
+
+/* ==========================
+   GARIS
+========================== */
+
+footer hr{
+
+    border:none;
+
+    height:1px;
+
+    background:rgba(255,255,255,.18);
+
+    margin:25px auto;
+
+    width:85%;
+
+}
+
+/* ==========================
+   COPYRIGHT
+========================== */
+
+footer p{
+
+    font-size:15px;
+
+    opacity:.85;
+
+    margin:0;
+
+}
+
+/* ==========================
+   ICON SOSIAL
+========================== */
+
+.footer-social{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-bottom:30px;
+
+}
+
+.footer-social a{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    background:rgba(255,255,255,.12);
+
+    transition:.35s;
+
+    font-size:22px;
+
+}
+
+.footer-social a:hover{
+
+    background:#25D366;
+
+    transform:translateY(-6px);
+
+}
+
+/* ==========================
+   BADGE
+========================== */
+
+.footer-badge{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.12);
+
+    font-size:14px;
+
+    letter-spacing:.5px;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+footer{
+
+padding:45px 15px 25px;
+
+}
+
+footer h3{
+
+font-size:24px;
+
+}
+
+footer .footer-address{
+
+font-size:15px;
+
+}
+
+.footer-social a{
+
+width:45px;
+
+height:45px;
+
+font-size:20px;
+
+}
+
+}
+
+/* ==========================================================
+   PART 2C-4
+   FLOATING WHATSAPP + BACK TO TOP
+========================================================== */
+
+/* ==========================
+   FLOATING WHATSAPP
+========================== */
+
+.floating-wa{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:34px;
+
+    text-decoration:none;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+    z-index:999;
+
+    transition:.3s ease;
+
+    animation:waPulse 2s infinite;
+
+}
+
+.floating-wa:hover{
+
+    transform:translateY(-5px) scale(1.08);
+
+    background:#1ebe5d;
+
+}
+
+/* ==========================
+   PULSE ANIMATION
+========================== */
+
+@keyframes waPulse{
+
+    0%{
+
+        box-shadow:0 0 0 0 rgba(37,211,102,.45);
+
+    }
+
+    70%{
+
+        box-shadow:0 0 0 18px rgba(37,211,102,0);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 0 rgba(37,211,102,0);
+
+    }
+
+}
+
+/* ==========================
+   BACK TO TOP
+========================== */
+
+#topBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:105px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:998;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.20);
+
+}
+
+#topBtn:hover{
+
+    background:var(--secondary);
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================
+   SHOW BUTTON
+========================== */
+
+#topBtn.show{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+.floating-wa{
+
+width:58px;
+
+height:58px;
+
+font-size:30px;
+
+right:18px;
+
+bottom:18px;
+
+}
+
+#topBtn{
+
+width:50px;
+
+height:50px;
+
+font-size:20px;
+
+right:18px;
+
+bottom:90px;
+
+}
+
+}
+
+/* ==========================
+   EXTRA SMALL PHONE
+========================== */
+
+@media(max-width:480px){
+
+.floating-wa{
+
+width:54px;
+
+height:54px;
+
+font-size:28px;
+
+}
+
+#topBtn{
+
+width:46px;
+
+height:46px;
+
+font-size:18px;
+
+}
+
+}
+
+/* ==========================================================
+   SMOOTH SECTION ANIMATION
+========================================================== */
+
+section{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   IMAGE SELECTION OFF
+========================================================== */
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+/* ==========================================================
+   BUTTON TRANSITION
+========================================================== */
+
+.btn,
+.btn2{
+
+    transition:.3s ease;
+
+}
+
+.btn:hover,
+.btn2:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================================
+   REMOVE BLUE TAP MOBILE
+========================================================== */
+
+a,
+button{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
