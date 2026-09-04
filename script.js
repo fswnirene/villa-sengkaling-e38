@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             lightboxImage.src = imageURL;
 
-            lightbox.classList.add("show");
+            lightbox.classList.add("active");
 
             document.body.classList.add("lightbox-open");
 
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function closeLightboxFunction() {
 
-        lightbox.classList.remove("show");
+        lightbox.classList.remove("active");
 
         document.body.classList.remove("lightbox-open");
 
@@ -411,7 +411,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("keydown", function (e) {
 
-        if (!lightbox.classList.contains("show")) {
+        if (!lightbox.classList.contains("active")) {
 
             return;
 
