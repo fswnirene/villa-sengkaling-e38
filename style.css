@@ -2745,10 +2745,9 @@ footer hr{
 ========================== */
 
 footer p{
-
     font-size:15px;
-
-    opacity:.85;
+    color:#ffffff;
+    opacity:1;
 
     margin:0;
 
